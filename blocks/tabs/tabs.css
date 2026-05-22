@@ -1,0 +1,53 @@
+/* ─── Tabs Block ────────────────────────────────────────────── */
+
+.tabs {
+  margin: 0 0 var(--spacing-2xl);
+}
+
+.tabs-list {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-tab {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+
+.tabs-tab:hover {
+  color: var(--color-text);
+}
+
+.tabs-tab.active {
+  color: var(--color-amber);
+  border-bottom-color: var(--color-amber);
+}
+
+.tabs-panel {
+  padding: var(--spacing-xl) 0;
+}
+
+.tabs-panel[hidden] {
+  display: none;
+}
+
+/* Code blocks inside tabs */
+.tabs-panel pre {
+  margin: 0;
+}
