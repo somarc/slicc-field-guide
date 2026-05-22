@@ -5,6 +5,15 @@
   "rules": {
     "color-function-notation": null,
     "alpha-value-notation": null,
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "/^-webkit-/"
+        ]
+      }
+    ],
+    "no-descending-specificity": null
   }
 }
