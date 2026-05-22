@@ -1,1 +1,45 @@
-/* add global styles that can be loaded post LCP here */
+/* Lazy-loaded styles — below-fold enhancements */
+
+/* Selection */
+::selection {
+  background: var(--color-amber-dim);
+  color: var(--color-heading);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyboard shortcut badges */
+kbd {
+  font-family: var(--mono-font-family);
+  font-size: 0.8em;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--color-text-muted);
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--color-amber);
+  margin: 1.5em 0;
+  padding: 12px 20px;
+  background: var(--color-surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+blockquote p {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
