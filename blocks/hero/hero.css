@@ -1,3 +1,9 @@
+/* ─── Hero ──────────────────────────────────────────────────── */
+
+.hero-container {
+  padding: 0 !important;
+}
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,33 +11,153 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* Animated grid background */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(245 166 35 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(245 166 35 / 4%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* Glow orb */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgb(245 166 35 / 8%) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  width: 100%;
+}
+
+.hero .hero-content {
+  max-width: 760px;
+}
+
+/* Eyebrow tag */
+.hero .hero-content::before {
+  content: '// field-guide v1.0';
+  display: block;
+  font-family: var(--mono-font-family);
+  font-size: 0.8rem;
+  color: var(--color-amber);
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  opacity: 0.8;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
 }
 
+/* Highlight first word in amber */
+.hero h1 em {
+  color: var(--color-amber);
+  font-style: normal;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.hero p.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.hero a.button.primary {
+  background: var(--color-amber);
+  color: #0d0f14;
+  border-color: var(--color-amber);
+  font-weight: 600;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+}
+
+.hero a.button.primary:hover {
+  background: #ffc04a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-amber-dim);
+}
+
+.hero a.button.secondary {
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  background: var(--color-surface-3);
+}
+
+.hero a.button.secondary:hover {
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  background: var(--color-cyan-dim);
+}
+
+/* Terminal prompt decoration */
 .hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: none;
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+/* Stat strip */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.hero-stat-value {
+  font-family: var(--mono-font-family);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-amber);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+  display: block;
 }
 
 @media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+  .hero > div {
+    padding: 140px 48px 100px;
   }
 }
