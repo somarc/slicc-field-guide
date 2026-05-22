@@ -9,15 +9,15 @@
   --color-bg: #0d0f14;
   --color-surface: #13161e;
   --color-surface-2: #1a1d27;
-  --color-surface-3: #20243280;
+  --color-surface-3: rgb(32 36 50 / 50%);
   --color-border: #2a2f3e;
   --color-border-subtle: #1e2230;
 
   /* Accent colors */
   --color-amber: #f5a623;
-  --color-amber-dim: #f5a62340;
+  --color-amber-dim: rgb(245 166 35 / 25%);
   --color-cyan: #00d4ff;
-  --color-cyan-dim: #00d4ff20;
+  --color-cyan-dim: rgb(0 212 255 / 12.5%);
   --color-green: #3ddc84;
   --color-purple: #a78bfa;
 
