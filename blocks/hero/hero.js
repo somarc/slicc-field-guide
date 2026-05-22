@@ -15,9 +15,11 @@ export default function decorate(block) {
   }
 
   // Detect CTA paragraphs: <p> containing only a single <a>
-  // Wrap them in a .hero-ctas container and give each link a cta-* class
+  // Wrap them in a .hero-ctas container, give each link a cta-* class
   const ctaPs = [...contentDiv.querySelectorAll('p')].filter((p) => {
-    const kids = [...p.childNodes].filter((n) => n.nodeType !== Node.TEXT_NODE || n.textContent.trim());
+    const kids = [...p.childNodes].filter(
+      (n) => n.nodeType !== Node.TEXT_NODE || n.textContent.trim(),
+    );
     return kids.length === 1 && kids[0].tagName === 'A';
   });
 
