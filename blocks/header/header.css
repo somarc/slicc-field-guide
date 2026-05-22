@@ -284,10 +284,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   header nav[aria-expanded='true'] .nav-sections {
     display: block;
     position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: var(--nav-height) 0 0 0;
     background: var(--color-surface);
     border-top: 1px solid var(--color-border);
     padding: 16px 24px 40px;
