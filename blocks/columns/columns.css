@@ -1,33 +1,68 @@
+/* ─── Columns ───────────────────────────────────────────────── */
+
 .columns > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns img {
-  width: 100%;
+  gap: 24px;
 }
 
 .columns > div > div {
-  order: 1;
+  flex: 1;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.columns > div > div h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
+.columns > div > div h3::before {
+  content: '//';
+  font-family: var(--mono-font-family);
+  font-size: 0.8em;
+  color: var(--color-amber);
+  font-weight: 400;
+}
+
+.columns > div > div p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* Divider between columns */
+.columns > div > div + div {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: 48px;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .columns > div > div + div {
+    padding-top: 0;
+    border-top: none;
+    padding-left: 48px;
+    border-left: 1px solid var(--color-border-subtle);
   }
+}
+
+/* Comparison variant */
+.columns.comparison > div > div {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.columns.comparison > div > div + div {
+  border-left: 1px solid var(--color-border);
+  padding-left: 28px;
 }
