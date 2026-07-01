@@ -1,0 +1,75 @@
+<body>
+  <header></header>
+  <main>
+    <div>
+      <h1>Why the name</h1>
+      <p class="lead">SLICC is a <strong>Self-Licking Ice Cream Cone</strong> — a recursive browser agent that can extend and operate itself. The vocabulary is not decoration. It is the architecture.</p>
+    </div>
+    <div>
+      <div class="picture">
+        <div><div>/media/slicc-disney-orchestrator.jpg</div></div>
+        <div><div>Disney-style illustration of SLICC: self-licking cone, Pinocchio orchestrator, scoop workers, art-deco rivet licks</div></div>
+        <div><div><em>Pinocchio orchestrator, scoop workers, rivet licks — cone · scoop · lick as a stage set.</em></div></div>
+      </div>
+    </div>
+    <div>
+      <h2>The cast</h2>
+      <div class="cards">
+        <div>
+          <div>
+            <h3>Cone</h3>
+            <p>The main agent — one per session. Orchestrates, delegates, synthesizes, and gates external handoffs. Not a side agent; the boss scoop with <code>isCone: true</code>.</p>
+            <p><a href="/guides/cone-and-scoops">Cone &amp; Scoops guide</a></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Scoops</h3>
+            <p>Side agents with isolated sandboxes and conversations. Parallel workers the cone feeds via <code>scoop_scoop</code> and <code>feed_scoop</code>. Heavy lifting happens here.</p>
+            <p><a href="/guides/cone-and-scoops">Cone &amp; Scoops guide</a></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Licks</h3>
+            <p>External interrupts — not agents. Webhooks, cron, navigate handoffs, sprinkle clicks, file watches. They wake the cone (or a targeted scoop) for a turn.</p>
+            <p><a href="/guides/licks">Licks &amp; Automation guide</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>The juxtaposition</h2>
+      <p>The illustration stacks three crafts that rarely share a frame:</p>
+      <ul>
+        <li><strong>Disney cel warmth</strong> — the cone and scoops as characters you can trust</li>
+        <li><strong>Pinocchio mechanics</strong> — wooden joints and a conductor's baton; delegation made visible</li>
+        <li><strong>Art-deco Chicago steel</strong> — licks as rivets racing rails; async events with industrial click-clank, not chat bubbles</li>
+      </ul>
+      <p>Soft gelato recursion meets hard async machinery. Light on the self-licking loop (the recursive subject). Shadow on the rivet rails (the interrupt layer). The orchestrator in the middle holding the composition together — same layout as the system diagram, told as lore instead of Mermaid.</p>
+    </div>
+    <div>
+      <h2>One line to remember</h2>
+      <p><strong>Cone</strong> = orchestrator · <strong>Scoops</strong> = side agents · <strong>Licks</strong> = external pings that wake one of them.</p>
+      <p>Licks are doorbells. Scoops are who answers when the cone sends them. The cone is who you talk to — and who must approve a <code>navigate</code> handoff before anything runs.</p>
+    </div>
+    <div>
+      <h2>Handoffs across agents</h2>
+      <p>When Grok, Claude, or another terminal agent hands work to SLICC, it arrives as a <code>navigate</code> lick: an RFC 8288 <code>Link</code> header or a <code>POST /api/handoff</code> to the local node-server. The cone shows an approval card. Accept dispatches by verb — <code>handoff:</code> to continue the task, <code>upskill:</code> to install a skill from GitHub.</p>
+      <p>See <a href="/guides/getting-started">What is SLICC</a> for the full mental model, then <a href="/guides/licks">Licks</a> for automation patterns.</p>
+    </div>
+    <div>
+      <div class="metadata">
+        <div>
+          <div><p>title</p></div>
+          <div><p>Why the name — SLICC Field Guide</p></div>
+        </div>
+        <div>
+          <div><p>description</p></div>
+          <div><p>The lore behind Self-Licking Ice Cream Cone: cone, scoop, lick, and the art-deco illustration that maps the agent model.</p></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
